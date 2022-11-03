@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Cálculo λ não tipado</title>
+</head>
+<body>
+  <div id="fullPage">
+    <div class="section s1">
+      <div class="container">
+        <div>
+          <img class="lamda" src="./assets/lamda.png">
+          <h2 class="title">
+            Cálculo λ não tipado
+          </h2>
+          <ul class="list-name">
+            <li>Davidson Marra</li>
+            <li>Pedro Henrique</li>
+          </ul>
+          <img class="mouse-icon" src="./assets/mouse.svg">
+        </div>
+      </div>
+    </div>
+    <div class="section s2">
+      <div class="container">
+        <h2 class="title">Tudo são funções...</h2>
+        <div>
+          <h3 class="sub-title">Origem do cálculo λ</h3>
+          <p class="description">Foi desenvolvido originalmente para ser uma notação não tipada e capturar
+            a essência da programação funcional de operadores para operandos</p>
+          <h3 class="sub-title mrg">Estruturas de dados, números, cadeias de bits...</h3>
+          <p class="description">Mas apesar disso, são todos de um único tipo: funções
+        </div>
+        <div class="container-example">
+          <ul>
+            <li>e ::= x <span>-- a variável é uma expresão λ</span></li>
+            <li>e ::= fun(x)e <span>-- extração funcional de e</span></li>
+            <li>e ::= e(e) <span>-- operador e aplicado ao operando e</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section s3">
+      <div class="container">
+        <h2 class="title">Exemplos do cálculo λ:</h2>
+        <h3 class="description">Funções orquestrando funções</h3>
+        <div class="container-image">
+          <ul>
+            <li>value id = fun(x) x <span>-- identidade</span></li>
+            <li>value succ = fun(x) x + 1 <span>-- sucessor</span></li>
+            <li>value twice = fun(f) fun(y) f(f(y)) <span>-- duas vezes</span></li>
+          </ul>
+        </div>
+        <p>E poderíamos ainda aplicar a função twice:</p>
+        <div class="container-image">
+          <ul>
+            <li>twice (succ) => fun(y)succ(succ(y))</li>
+            <li>twice (fun(x)x +1) => fun(y)(fun(x) x + 1)((fun(x)x + 1) (y)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section s4">
+      <div class="container">
+        <h2 class="title">E qual limitação temos?</h2>
+        <h3 class="description">Como e por quê os tipos surgem?</h3>
+        <div class="container-image">
+          <ul>
+            <li>A função succ inevitavelmente pode ser<br> aplicada apenas a números inteiros</li>
+            <li>Tipos surgem quando especializamos<br> uma notação não tipada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section s5">
+      <div class="container">
+        <h2 class="title">Obrigado!</h2>
+        <h3 class="description">Feito com JavaScript 💙</h3>
+      </div>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.js" integrity="sha512-GgeYbSbIufsTDQLCp/zhWN2AJRddt3w9p942+lOS5emAtvRBGo65t2zq8Svq+CIZIo1V1DgA6kHzQTBCH0HiXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
